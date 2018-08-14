@@ -10,7 +10,7 @@ server:
     key-alias: tomcat
 spring:
   thymeleaf:
-    cache: false
+    cache: true
   datasource:
     core-master:
       jdbc-url: jdbc:log4jdbc:mysql://xxx.xxx.xxx.xxx:xxxx/db_name_1?userUnicode=true&amp;charactorEncoding=UTF-8&amp;autoReconnect=true
