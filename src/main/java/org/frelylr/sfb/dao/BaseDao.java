@@ -14,13 +14,13 @@ import org.springframework.jdbc.core.namedparam.NamedParameterJdbcTemplate;
 public abstract class BaseDao {
 
     @Autowired
-    @Qualifier("coreMasterJdbcTemplate")
-    protected NamedParameterJdbcTemplate jdbcTemplate;
+    @Qualifier("primaryJdbcTemplate")
+    private NamedParameterJdbcTemplate jdbcTemplate;
 
     /**
      * selectForObject
      */
-    public <T>T selectForObject(StringBuilder sql, Class<T> t) {
+    <T> T selectForObject(StringBuilder sql, Class<T> t) {
 
         try {
             return jdbcTemplate.queryForObject(sql.toString(), new HashMap<>(), t);
@@ -32,7 +32,7 @@ public abstract class BaseDao {
     /**
      * selectForObject
      */
-    public <T>T selectForObject(StringBuilder sql, Map<String, ?> paramMap, Class<T> t) {
+    <T> T selectForObject(StringBuilder sql, Map<String, ?> paramMap, Class<T> t) {
 
         try {
             return jdbcTemplate.queryForObject(sql.toString(), paramMap, t);
@@ -44,7 +44,7 @@ public abstract class BaseDao {
     /**
      * selectForEntity
      */
-    public <T>T selectForEntity(StringBuilder sql, Class<T> t) {
+    <T> T selectForEntity(StringBuilder sql, Class<T> t) {
 
         try {
             return jdbcTemplate.queryForObject(sql.toString(), new HashMap<>(), BeanPropertyRowMapper.newInstance(t));
@@ -56,7 +56,7 @@ public abstract class BaseDao {
     /**
      * selectForEntity
      */
-    public <T>T selectForEntity(StringBuilder sql, Map<String, ?> paramMap, Class<T> t) {
+    <T> T selectForEntity(StringBuilder sql, Map<String, ?> paramMap, Class<T> t) {
 
         try {
             return jdbcTemplate.queryForObject(sql.toString(), paramMap, BeanPropertyRowMapper.newInstance(t));
@@ -68,7 +68,7 @@ public abstract class BaseDao {
     /**
      * selectForObjectList
      */
-    public <T>List<T> selectForObjectList(StringBuilder sql, Class<T> t) {
+    <T> List<T> selectForObjectList(StringBuilder sql, Class<T> t) {
 
         return jdbcTemplate.query(sql.toString(), SingleColumnRowMapper.newInstance(t));
     }
@@ -76,7 +76,7 @@ public abstract class BaseDao {
     /**
      * selectForObjectList
      */
-    public <T>List<T> selectForObjectList(StringBuilder sql, Map<String, ?> paramMap, Class<T> t) {
+    <T> List<T> selectForObjectList(StringBuilder sql, Map<String, ?> paramMap, Class<T> t) {
 
         return jdbcTemplate.query(sql.toString(), paramMap, SingleColumnRowMapper.newInstance(t));
     }
@@ -84,7 +84,7 @@ public abstract class BaseDao {
     /**
      * selectForEntityList
      */
-    public <T>List<T> selectForEntityList(StringBuilder sql, Class<T> t) {
+    <T> List<T> selectForEntityList(StringBuilder sql, Class<T> t) {
 
         return jdbcTemplate.query(sql.toString(), BeanPropertyRowMapper.newInstance(t));
     }
@@ -92,7 +92,7 @@ public abstract class BaseDao {
     /**
      * selectForEntityList
      */
-    public <T>List<T> selectForEntityList(StringBuilder sql, Map<String, ?> paramMap, Class<T> t) {
+    <T> List<T> selectForEntityList(StringBuilder sql, Map<String, ?> paramMap, Class<T> t) {
 
         return jdbcTemplate.query(sql.toString(), paramMap, BeanPropertyRowMapper.newInstance(t));
     }

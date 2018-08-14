@@ -12,13 +12,13 @@ spring:
   thymeleaf:
     cache: false
   datasource:
-    core-master:
-      jdbc-url: jdbc:log4jdbc:mysql://xxx.xxx.xxx.xxx:xxxx/db_name_1?userUnicode=true&amp;charactorEncoding=UTF-8&amp;autoReconnect=true
+    primary:
+      jdbc-url: jdbc:log4jdbc:mysql://xxx.xxx.xxx.xxx:xxxx/primary_db_name?userUnicode=true&amp;charactorEncoding=UTF-8&amp;autoReconnect=true
       username: root
       password: password
       driver-class-name: net.sf.log4jdbc.DriverSpy
-    blade-master:
-      jdbc-url: jdbc:log4jdbc:mysql://xxx.xxx.xxx.xxx:xxxx/db_name_2?userUnicode=true&amp;charactorEncoding=UTF-8&amp;autoReconnect=true
+    slave:
+      jdbc-url: jdbc:log4jdbc:mysql://xxx.xxx.xxx.xxx:xxxx/slave_db_name_2?userUnicode=true&amp;charactorEncoding=UTF-8&amp;autoReconnect=true
       username: root
       password: password
       driver-class-name: net.sf.log4jdbc.DriverSpy

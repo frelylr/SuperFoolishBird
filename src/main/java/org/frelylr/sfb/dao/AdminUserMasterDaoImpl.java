@@ -23,7 +23,7 @@ public class AdminUserMasterDaoImpl extends BaseDao implements AdminUserMasterDa
         sql.append("   sec_user_name, ");
         sql.append("   remarks ");
         sql.append(" FROM ");
-        sql.append("    core_master_db.admin_user_master ");
+        sql.append("   admin_user_master ");
         sql.append(" WHERE ");
         sql.append("   sec_user_mail_address = :secUserMailAddress ");
         sql.append("   AND soft_delete_flag = 'open' ");

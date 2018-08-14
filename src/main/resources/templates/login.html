@@ -1,44 +1,49 @@
 <!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org">
 <head>
-<title>SUPER FOOLISH BIRD</title>
-<link type="text/css" th:href="@{/css/login/login.css}" rel="stylesheet" />
-<script type="text/javascript" th:src="@{/js/all.js}"></script>
-<script type="text/javascript" th:src="@{/js/login/login.js}"></script>
+  <title>SUPER FOOLISH BIRD</title>
+  <link type="text/css" th:href="@{/css/login/login.css}" rel="stylesheet"/>
+  <script type="text/javascript" th:src="@{/js/all.js}"></script>
+  <script type="text/javascript" th:src="@{/js/login/login.js}"></script>
 </head>
 <body>
-  <div id="loginDiv">
-    <div id="logoDiv">SUPER FOOLISH BIRD</div>
-    <div>
-      <table id="loginTable">
-        <tr>
-          <td>
-            <span th:text="#{mailAddress}"></span> :
-          </td>
-          <td>
-            <input type="text" v-model="mailAddress" />
-          </td>
-        </tr>
-        <tr>
-          <td>
-            <span th:text="#{password}"></span> :
-          </td>
-          <td>
-            <input type="password" v-model="password" />
-          </td>
-        <tr>
-          <td>
-            <select @change="changeLang($event)">
-              <option th:selected="${l.value eq lang}" th:each="l:${languages}" th:value="${l.value}" th:text="${l.name}"></option>
-            </select>
-          </td>
-          <td>
-            <button id="registerBtn" class="button" @click="register"><span th:text="#{register}"></span></button>
-            <button id="loginBtn" class="button" @click="login"><span th:text="#{login}"></span></button>
-          </td>
-        </tr>
-      </table>
-    </div>
+<div id="loginDiv">
+  <div id="logoDiv">SUPER FOOLISH BIRD</div>
+  <div>
+    <table id="loginTable">
+      <tr>
+        <td>
+          <span th:text="#{mailAddress}"></span> :
+        </td>
+        <td>
+          <input type="text" v-model="mailAddress"/>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <span th:text="#{password}"></span> :
+        </td>
+        <td>
+          <input type="password" v-model="password"/>
+        </td>
+      <tr>
+        <td>
+          <select @change="changeLang($event)">
+            <option th:selected="${l.value eq lang}" th:each="l:${languages}" th:value="${l.value}" th:text="${l.name}">
+            </option>
+          </select>
+        </td>
+        <td>
+          <button id="registerBtn" class="button" @click="register">
+            <span th:text="#{register}"></span>
+          </button>
+          <button id="loginBtn" class="button" @click="login">
+            <span th:text="#{login}"></span>
+          </button>
+        </td>
+      </tr>
+    </table>
   </div>
+</div>
 </body>
 </html>

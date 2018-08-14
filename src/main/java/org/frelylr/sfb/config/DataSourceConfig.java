@@ -14,41 +14,41 @@ import org.springframework.jdbc.core.namedparam.NamedParameterJdbcTemplate;
 public class DataSourceConfig {
 
     /**
-     * CoreMasterDB DataSource
+     * PrimaryDB DataSource
      */
     @Primary
-    @Bean(name = "coreMasterDataSource")
-    @Qualifier("coreMasterDataSource")
-    @ConfigurationProperties(prefix = "spring.datasource.core-master")
-    public DataSource coreMasterDataSource() {
+    @Bean(name = "primaryDataSource")
+    @Qualifier("primaryDataSource")
+    @ConfigurationProperties(prefix = "spring.datasource.primary")
+    public DataSource primaryDataSource() {
         return DataSourceBuilder.create().build();
     }
 
     /**
-     * BladeMasterDB DataSource
+     * SlaveDB DataSource
      */
-    @Bean(name = "bladeMasterDataSource")
-    @Qualifier("bladeMasterDataSource")
-    @ConfigurationProperties(prefix = "spring.datasource.blade-master")
-    public DataSource bladeMasterDataSource() {
+    @Bean(name = "slaveDataSource")
+    @Qualifier("slaveDataSource")
+    @ConfigurationProperties(prefix = "spring.datasource.slave")
+    public DataSource slaveDataSource() {
         return DataSourceBuilder.create().build();
     }
 
     /**
-     * CoreMasterDB JdbcTemplate
+     * PrimaryDB JdbcTemplate
      */
-    @Bean(name = "coreMasterJdbcTemplate")
-    public NamedParameterJdbcTemplate coreMasterJdbcTemplate(
-            @Qualifier("coreMasterDataSource") DataSource dataSource) {
+    @Bean(name = "primaryJdbcTemplate")
+    public NamedParameterJdbcTemplate primaryJdbcTemplate(
+            @Qualifier("primaryDataSource") DataSource dataSource) {
         return new NamedParameterJdbcTemplate(dataSource);
     }
 
     /**
-     * BladeMasterDB JdbcTemplate
+     * SlaveDB JdbcTemplate
      */
-    @Bean(name = "bladeMasterJdbcTemplate")
-    public NamedParameterJdbcTemplate bladeMasterJdbcTemplate(
-            @Qualifier("bladeMasterDataSource") DataSource dataSource) {
+    @Bean(name = "slaveJdbcTemplate")
+    public NamedParameterJdbcTemplate slaveJdbcTemplate(
+            @Qualifier("slaveDataSource") DataSource dataSource) {
         return new NamedParameterJdbcTemplate(dataSource);
     }
 }
