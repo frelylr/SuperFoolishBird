@@ -1,0 +1,48 @@
+#loginDiv {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  margin: -120px 0 0 -350px;
+}
+
+#logoDiv {
+  font-size: 60px;
+  font-weight: bold;
+  color: lightseagreen;
+}
+
+#loginTable {
+  margin: auto;
+  padding-top: 30px;
+  font-size: 20px;
+  font-weight: bold;
+  color: lightseagreen;
+}
+
+#registerBtn {
+  float: left;
+}
+
+#loginBtn {
+  float: right;
+}
+
+.button {
+  border: none;
+  color: white;
+  padding: 1px 10px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+#loginDiv select {
+  appearance: none;
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  background: url("/img/arrow.png") no-repeat scroll right center transparent;
+  padding: 1px 14px 1px 3px;
+}
+
+#loginDiv select::-ms-expand {
+  display: none;
+}

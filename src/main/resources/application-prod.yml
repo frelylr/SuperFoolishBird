@@ -1,0 +1,29 @@
+server:
+  port: 8543
+  servlet:
+    session:
+      timeout: 1800
+  ssl:
+    key-store: classpath:keystore.p12
+    key-store-password: nicai?
+    key-store-type: PKCS12
+    key-alias: tomcat
+spring:
+  thymeleaf:
+    cache: false
+  datasource:
+    core-master:
+      jdbc-url: jdbc:log4jdbc:mysql://xxx.xxx.xxx.xxx:xxxx/db_name_1?userUnicode=true&amp;charactorEncoding=UTF-8&amp;autoReconnect=true
+      username: root
+      password: password
+      driver-class-name: net.sf.log4jdbc.DriverSpy
+    blade-master:
+      jdbc-url: jdbc:log4jdbc:mysql://xxx.xxx.xxx.xxx:xxxx/db_name_2?userUnicode=true&amp;charactorEncoding=UTF-8&amp;autoReconnect=true
+      username: root
+      password: password
+      driver-class-name: net.sf.log4jdbc.DriverSpy
+  aop:
+    auto: true
+  messages:
+    encoding: UTF-8
+    basename: messages/messages
