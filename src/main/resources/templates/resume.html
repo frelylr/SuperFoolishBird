@@ -2,12 +2,23 @@
 <head>
   <meta name="viewport" content="width=device-width, initial-scale=1" charset="UTF-8"/>
   <link href="//netdna.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+  <script src="./js/iconfont.js"></script>
+  <script src="./js/resume.js"></script>
   <title>个人简历</title>
   <style>
     body {
       font-size: smaller;
       font-family: "Arial", "Microsoft YaHei", "黑体", "宋体", sans-serif;
     }
+
+    .icon {
+      width: 1em;
+      height: 1em;
+      vertical-align: -0.15em;
+      fill: currentColor;
+      overflow: hidden;
+    }
+
     #resume {
       width: 1000px;
       height: 2000px;
@@ -24,11 +35,15 @@
     #rightBody {
       width: 700px;
       height: inherit;
-      background-color: gainsboro;
+      background-color: whitesmoke;
       float: left;
     }
 
-    #leftBody #headPortrait #photo {
+    #personalDetails ul {
+      margin-left: 80px;
+    }
+
+    #photo {
       width: 180px;
       height: 180px;
       border-radius: 180px;
@@ -37,31 +52,156 @@
       background-size: cover;
     }
 
-    #leftBody #maxim p {
+    #maxim p {
       text-align: center;
-      font-size: smaller;
       color: paleturquoise;
       margin: auto;
     }
 
-    #leftBody #name p {
+    #name p {
       text-align: center;
       margin: 20px auto;
       font-size: 38px;
       color: white;
     }
 
-    #leftBody #personalDetails {
-      margin: auto 10px;
-    }
-
-    #leftBody #personalDetails #personalDetailsIcon {
+    #personalDetails {
+      margin: auto 20px;
       font-size: 18px;
       color: white;
     }
 
-    #leftBody #personalDetails #personalDetailsIcon ul {
-      margin-left: 80px;
+    #hobbies, #skills, #foreignLanguages {
+      font-size: 18px;
+      color: white;
+    }
+
+    #leftBody .iconTitle {
+      font-size: 30px;
+      margin-left: 40px;
+    }
+
+    #rightBody .iconTitle {
+      font-size: 30px;
+      margin-left: 20px;
+      color: cadetblue;
+    }
+
+    #hobbies li {
+      margin-left: 90px;
+    }
+
+    .skill {
+      margin-left: 72px;
+    }
+
+    .language {
+      margin-left: 72px;
+    }
+
+    .percent {
+      height: 10px;
+      width: 120px;
+      background-color: gainsboro;
+      line-height: 10px;
+      display: inline-block;
+    }
+
+    .inner {
+      background-color: mediumturquoise;
+      height: 10px;
+      line-height: 10px;
+      display: inline-block;
+      float: left;
+    }
+
+    .skillsName {
+      font-size: 12px;
+      font-style: italic;
+      color: beige;
+    }
+
+    span.java {
+      width: 100px;
+    }
+
+    span.spring {
+      width: 65px;
+    }
+
+    span.springboot {
+      width: 75px;
+    }
+
+    span.mysql {
+      width: 80px;
+    }
+
+    span.php {
+      width: 30px;
+    }
+
+    span.jquery {
+      width: 90px;
+    }
+
+    span.vuejs {
+      width: 40px;
+    }
+
+    span.html5 {
+      width: 10px;
+    }
+
+    span.css3 {
+      width: 10px;
+    }
+
+    span.en {
+      width: 60px;
+    }
+
+    span.jp {
+      width: 30px;
+    }
+
+    .rightBodyTitle {
+      color: #fafafa;
+      text-shadow: 0 1px 0 #999, 0 2px 0 #888, 0 3px 0 #777, 0 4px 0 #666, 0 5px 0 #555, 0 6px 0 #444, 0 7px 0 #333, 0 8px 7px #001135;
+      text-align: center;
+      font-size: 24px;
+      letter-spacing: 20px;
+      margin: 10px 0 30px 0;
+    }
+
+    hr {
+      width: 84%;
+      height: 2px;
+      margin: 0 auto;
+      border: 0;
+      background: #333 linear-gradient(to right, #5f9ea0, #5f9ea0, #f5f5f5);
+    }
+
+    #jobContent {
+      text-align: center;
+      padding: 20px 0 40px 0;
+      font-size: 15px;
+    }
+
+    #jobContent div {
+      width: 33%;
+      float: left;
+    }
+
+    #education {
+      text-align: center;
+      padding: 20px 0 40px 0;
+      font-size: 15px;
+    }
+
+    #education div {
+      width: 33%;
+      float: left;
     }
   </style>
 </head>
@@ -72,41 +212,179 @@
       <div id="photo"></div>
     </div>
     <div id="maxim">
-      <p>经过一个过程，然后成为自己</p>
+      <p>code wins arguments</p>
     </div>
     <div id="name">
       <p>傅 雷</p>
     </div>
     <div id="personalDetails">
-      <div id="personalDetailsIcon">
-        <ul class="fa-ul">
-          <li><i class="fa-li fa fa-mars"></i>男</li>
-          <li><i class="fa-li fa fa-birthday-cake"></i>1988-04-17</li>
-          <li><i class="fa-li fa fa-map-marker"></i>沈阳市 大东区</li>
-          <li><i class="fa-li fa fa-mortar-board"></i>本科</li>
-          <li><i class="fa-li fa fa-university"></i>沈阳航空航天大学</li>
-          <li><i class="fa-li fa fa-laptop"></i>软件工程</li>
-          <br/>
-          <li><i class="fa-li fa fa-envelope-o"></i>frelylr@163.com</li>
-          <li><i class="fa-li fa fa-weixin"></i>fre001314</li>
-          <li><i class="fa-li fa fa-phone"></i>15009885968</li>
-          <br/>
-          <i class="fa fa-smile-o fa-3x"></i> 兴趣爱好
-          <li><i class="fa-li fa fa-film"></i>电影</li>
-          <li><i class="fa-li fa fa-dribbble"></i>运动</li>
-          <li><i class="fa-li fa fa-gamepad"></i>网游</li>
-          <br/>
-        </ul>
-      </div>
-    </div>
-    <div id="skills">
       <ul class="fa-ul">
-      <i class="fa fa-bolt fa-3x"></i> 专业技能
+        <li><i class="fa-li fa fa-mars fa-fw"></i>男</li>
+        <li><i class="fa-li fa fa-birthday-cake fa-fw"></i>1988-04-17</li>
+        <li><i class="fa-li fa fa-map-marker fa-fw"></i>沈阳市 大东区</li>
+        <li><i class="fa-li fa fa-mortar-board fa-fw"></i>本科</li>
+        <li><i class="fa-li fa fa-hourglass-half fa-fw"></i>工作年限：<span id="workDays"></span>年</li>
+        <br/>
+        <li><i class="fa-li fa fa-envelope-o fa-fw"></i>frelylr@163.com</li>
+        <li><i class="fa-li fa fa-weixin fa-fw"></i>fre001314</li>
+        <li><i class="fa-li fa fa-phone fa-fw"></i>15009885968</li>
       </ul>
+    </div>
+    <br/>
+    <div id="hobbies">
+      <svg class="icon iconTitle" aria-hidden="true">
+        <use xlink:href="#icon-aihao"></use>
+      </svg>
+      <i>兴趣爱好</i>
+      <br/>
+      <ul class="fa-ul">
+        <li><i class="fa-li fa fa-film"></i>电影</li>
+        <li><i class="fa-li fa fa-dribbble"></i>运动</li>
+        <li><i class="fa-li fa fa-gamepad"></i>游戏</li>
+      </ul>
+    </div>
+    <br/>
+    <div id="skills">
+      <svg class="icon iconTitle" aria-hidden="true">
+        <use xlink:href="#icon-jinengdian"></use>
+      </svg>
+      <i>专业技能</i>
+      <br/>
+      <br/>
+      <svg class="icon skill" aria-hidden="true">
+        <use xlink:href="#icon-java"></use>
+      </svg>
+      <span class="percent"><span class="inner java"></span></span>
+      <span class="skillsName">java</span>
+      <br/>
+      <svg class="icon skill" aria-hidden="true">
+        <use xlink:href="#icon-icon-spring-framewor"></use>
+      </svg>
+      <span class="percent"><span class="inner spring"></span></span>
+      <span class="skillsName">spring</span>
+      <br/>
+      <svg class="icon skill" aria-hidden="true">
+        <use xlink:href="#icon-springboot"></use>
+      </svg>
+      <span class="percent"><span class="inner springboot"></span></span>
+      <span class="skillsName">springboot</span>
+      <br/>
+      <svg class="icon skill" aria-hidden="true">
+        <use xlink:href="#icon-mysql"></use>
+      </svg>
+      <span class="percent"><span class="inner mysql"></span></span>
+      <span class="skillsName">mysql</span>
+      <br/>
+      <svg class="icon skill" aria-hidden="true">
+        <use xlink:href="#icon-php-copy"></use>
+      </svg>
+      <span class="percent"><span class="inner php"></span></span>
+      <span class="skillsName">php</span>
+      <br/>
+      <svg class="icon skill" aria-hidden="true">
+        <use xlink:href="#icon-jquery"></use>
+      </svg>
+      <span class="percent"><span class="inner jquery"></span></span>
+      <span class="skillsName">jquery</span>
+      <br/>
+      <svg class="icon skill" aria-hidden="true">
+        <use xlink:href="#icon-vuejs"></use>
+      </svg>
+      <span class="percent"><span class="inner vuejs"></span></span>
+      <span class="skillsName">vuejs</span>
+      <br/>
+      <svg class="icon skill" aria-hidden="true">
+        <use xlink:href="#icon-html5"></use>
+      </svg>
+      <span class="percent"><span class="inner html5"></span></span>
+      <span class="skillsName">html5</span>
+      <br/>
+      <svg class="icon skill" aria-hidden="true">
+        <use xlink:href="#icon-CSS"></use>
+      </svg>
+      <span class="percent"><span class="inner css3"></span></span>
+      <span class="skillsName">css3</span>
+    </div>
+    <br/>
+    <br/>
+    <div id="foreignLanguages">
+      <svg class="icon iconTitle" aria-hidden="true">
+        <use xlink:href="#icon-lang"></use>
+      </svg>
+      <i>外语水平</i>
+      <br/>
+      <br/>
+      <svg class="icon language" aria-hidden="true">
+        <use xlink:href="#icon-yingyu"></use>
+      </svg>
+      <span class="percent"><span class="inner en"></span></span>
+      <span class="skillsName">English</span>
+      <br/>
+      <svg class="icon language" aria-hidden="true">
+        <use xlink:href="#icon-riyu"></use>
+      </svg>
+      <span class="percent"><span class="inner jp"></span></span>
+      <span class="skillsName">日本語</span>
+      <br/>
     </div>
   </div>
   <div id="rightBody">
-
+    <div class="rightBodyTitle">
+      经过一个过程，然后成为自己
+    </div>
+    <div>
+      <svg class="icon iconTitle" aria-hidden="true">
+        <use xlink:href="#icon-qiuzhiyixiang"></use>
+      </svg>
+      <i>求职意向</i>
+    </div>
+    <hr/>
+    <div id="jobContent">
+      <div>Java</div>
+      <div>全职</div>
+      <div>沈阳</div>
+    </div>
+    <div>
+      <svg class="icon iconTitle" aria-hidden="true">
+        <use xlink:href="#icon-jiaoyu01"></use>
+      </svg>
+      <i>教育背景</i>
+    </div>
+    <hr/>
+    <div id="education">
+      <div>2007.9-2011.7</div>
+      <div>沈阳航空航天大学</div>
+      <div>计算机科学与技术(软件工程)</div>
+    </div>
+    <div>
+      <svg class="icon iconTitle" aria-hidden="true">
+        <use xlink:href="#icon-gongzuojingli"></use>
+      </svg>
+      <i>工作经历</i>
+    </div>
+    <hr/>
+    <div id="experience1">
+      <div>2011.7-2012.1</div>
+      <div>东软</div>
+      <div>实施工程师</div>
+    </div>
+    <div id="experience2">
+      <div>2012.2-2014.6</div>
+      <div>沈阳无限软件科技有限公司</div>
+      <div>软件开发</div>
+    </div>
+    <div id="experience3">
+      <div>2014.7-2018.8</div>
+      <div>微告科技(沈阳)有限公司</div>
+      <div>软件开发</div>
+    </div>
+    <div>
+      <svg class="icon iconTitle" aria-hidden="true">
+        <use xlink:href="#icon-xiangmujingyan"></use>
+      </svg>
+      <i>项目经验</i>
+    </div>
+    <hr/>
   </div>
 </div>
 </body>
