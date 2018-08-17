@@ -1,6 +1,11 @@
 <!DOCTYPE html>
 <head>
-  <meta name="viewport" content="width=device-width, initial-scale=1" charset="UTF-8"/>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  <meta name="viewport"
+        content="width=device-width,height=device-height,inital-scale=1.0,maximum-scale=1.0,user-scalable=no;">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  <meta name="format-detection" content="telephone=no">
   <link href="//netdna.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
   <script src="./js/iconfont.js"></script>
   <script src="./js/resume.js"></script>
@@ -46,7 +51,7 @@
     #photo {
       width: 180px;
       height: 180px;
-      border-radius: 180px;
+      border-radius: 50%;
       margin: 10px auto 5px auto;
       background: url(./img/headPhoto.png) center center no-repeat;
       background-size: cover;
@@ -87,8 +92,28 @@
       color: cadetblue;
     }
 
-    #hobbies li {
-      margin-left: 90px;
+    #hobbyIcon {
+      margin-top: 15px;
+      margin-left: 72px;
+      font-size: 28px;
+    }
+
+    #hobbyIcon div {
+      float: left;
+      width: 40px;
+      height: 30px;
+      background-color: white;
+      line-height: 32px;
+      text-align: center;
+      border-radius: 50%;
+    }
+
+    #hobbyIcon div:nth-child(1n+2) {
+      margin-left: 5px;
+    }
+
+    #hobbyIcon svg {
+      color: cadetblue;
     }
 
     .skill {
@@ -174,7 +199,7 @@
       margin: 10px 0 30px 0;
     }
 
-    hr {
+    hr.titleLine {
       width: 84%;
       height: 2px;
       margin: 0 auto;
@@ -202,6 +227,86 @@
     #education div {
       width: 33%;
       float: left;
+    }
+
+    #education div {
+      width: 33%;
+      float: left;
+    }
+
+    #experience1, #experience2, #experience3 {
+      text-align: center;
+      padding: 20px 0 10px 0;
+      font-size: 15px;
+    }
+
+    #experience3 {
+      padding-bottom: 40px;
+    }
+
+    #experience1 div, #experience2 div, #experience3 div {
+      width: 33%;
+      float: left;
+    }
+
+    #projects {
+      padding: 5px 30px 10px 50px;
+    }
+
+    .dot {
+      margin-bottom: 10px;
+      width: 15px;
+      height: 15px;
+      background-color: #f5f5f5;
+      border-radius: 50%;
+      box-shadow: 0 0 10px rgba(0, 0, 0, .3) inset;
+      -webkit-animation-name: 'ripple';
+      -webkit-animation-duration: 1s;
+      -webkit-animation-timing-function: ease-out;
+      -webkit-animation-delay: 0s;
+      -webkit-animation-iteration-count: infinite;
+      -webkit-animation-direction: alternate;
+    }
+
+    @keyframes ripple {
+      0% {
+        box-shadow: inset -1px 1px 3px 2px #5f9ea0, inset 1px -1px 3px 2px #5f9ea0, 0 0 0px 0 #b2ff1a;
+      }
+      50% {
+        box-shadow: inset -1px 1px 3px 2px #5f9ea0, inset 1px -1px 3px 2px #5f9ea0, 0 0 20px 0 #1affff;
+      }
+      100% {
+        box-shadow: inset -1px 1px 3px 2px #5f9ea0, inset 1px -1px 3px 2px #5f9ea0, 0 0 0px 0 #b2ff1a;
+      }
+    }
+
+    #blade, #compass, #pManager, #other {
+      margin-top: 10px;
+    }
+
+    #blade p, #compass p, #pManager p, #other p {
+      width: 100px;
+      font-family: helvetica, arial, sans-serif;
+      color: white;
+      font-size: 15px;
+      font-weight: bold;
+      text-shadow: 0 0 0.2em rgb(95, 158, 160), 0 0 0.2em black;
+    }
+
+    .marginTop10 {
+      margin-top: 10px;
+    }
+
+    section {
+      padding-left: 20px;
+    }
+
+    #other table {
+      margin-left: 20px;
+    }
+
+    #other table td:nth-child(1n+2) {
+      padding-left: 40px;
     }
   </style>
 </head>
@@ -237,12 +342,30 @@
       </svg>
       <i>兴趣爱好</i>
       <br/>
-      <ul class="fa-ul">
-        <li><i class="fa-li fa fa-film"></i>电影</li>
-        <li><i class="fa-li fa fa-dribbble"></i>运动</li>
-        <li><i class="fa-li fa fa-gamepad"></i>游戏</li>
-      </ul>
+      <div id="hobbyIcon">
+        <div>
+          <svg class="icon" aria-hidden="true">
+            <use xlink:href="#icon-futbolo"></use>
+          </svg>
+        </div>
+        <div>
+          <svg class="icon" aria-hidden="true">
+            <use xlink:href="#icon-lanqiu"></use>
+          </svg>
+        </div>
+        <div>
+          <svg class="icon" aria-hidden="true">
+            <use xlink:href="#icon-gongxiang-"></use>
+          </svg>
+        </div>
+        <div>
+          <svg class="icon" aria-hidden="true">
+            <use xlink:href="#icon-youxi"></use>
+          </svg>
+        </div>
+      </div>
     </div>
+    <br/>
     <br/>
     <div id="skills">
       <svg class="icon iconTitle" aria-hidden="true">
@@ -338,7 +461,7 @@
       </svg>
       <i>求职意向</i>
     </div>
-    <hr/>
+    <hr class="titleLine"/>
     <div id="jobContent">
       <div>Java</div>
       <div>全职</div>
@@ -350,7 +473,7 @@
       </svg>
       <i>教育背景</i>
     </div>
-    <hr/>
+    <hr class="titleLine"/>
     <div id="education">
       <div>2007.9-2011.7</div>
       <div>沈阳航空航天大学</div>
@@ -362,10 +485,10 @@
       </svg>
       <i>工作经历</i>
     </div>
-    <hr/>
+    <hr class="titleLine"/>
     <div id="experience1">
       <div>2011.7-2012.1</div>
-      <div>东软</div>
+      <div>东软医疗IT事业部</div>
       <div>实施工程师</div>
     </div>
     <div id="experience2">
@@ -384,7 +507,79 @@
       </svg>
       <i>项目经验</i>
     </div>
-    <hr/>
+    <hr class="titleLine"/>
+    <div id="projects">
+      <div id="blade">
+        <div class="dot"><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;BLADE</p></div>
+        <section>
+          亚洲市场份额占比最大的DSP(广告投放管理)平台，是以广告主的ROI(投资回报率)最大化为目的进行展示广告投放、管理的平台。
+          主要服务：Engagement(用户参与度)优化、全球化投放管理、一站式投稿接口、全球化宣传战略。
+        </section>
+        <section class="marginTop10">职责：开发、维护、优化、技术调查等。</section>
+        <section>技术：Java、SpringMvc、MySql、Dojo</section>
+      </div>
+      <div id="compass">
+        <div class="dot"><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;COMPASS</p></div>
+        <section>
+          广告管理平台，主要以网络展示广告为核心，向广告主和媒体双方提供服务。
+          为广告主提供更多的广告空间，高效、精确地发布广告信息。
+          向媒体提供广告位创收的渠道，挖掘新盈利模式。
+        </section>
+        <section class="marginTop10">职责：开发、junit测试、维护、技术调查等。</section>
+        <section>技术：Java、SpringMvc、MySql、Jquery</section>
+      </div>
+      <div id="pManager">
+        <div class="dot"><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;P-Manager</p></div>
+        <section>
+          项目管理者系统，专为各项目管理者定制的多功能模块系统，根据需求，逐渐扩展功能模块。
+          例如某个项目业务变更后，管理者需要大批量修改既存数据，又或者需要批量导入/导出数据等，我们会针对需求开发相应功能页面。
+          管理者用自己的身份登录系统，便可根据需要进行权限内的操作。
+        </section>
+        <section class="marginTop10">职责：搭建框架、共通设计、功能开发、维护、技术调查等。</section>
+        <section>技术：Java、SpringBoot、Thymeleaf、MySql、Vue</section>
+      </div>
+      <div id="other">
+        <div class="dot"><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;其它项目</p></div>
+        <table>
+          <tr>
+            <td>GOLF</td>
+            <td>高尔夫球场管理系统</td>
+            <td>Java、Struts、MySql</td>
+            <td>开发</td>
+          </tr>
+          <tr>
+            <td>CFOS</td>
+            <td>药店的管理系统</td>
+            <td>SqlServer</td>
+            <td>存储过程</td>
+          </tr>
+          <tr>
+            <td>A-AUTO</td>
+            <td>自动化管理软件</td>
+            <td>Unix(Linux/AIX/Solaris/HP-UX)</td>
+            <td>测试</td>
+          </tr>
+          <tr>
+            <td>EASY</td>
+            <td>员工管理系统</td>
+            <td>VB.net、SqlServer</td>
+            <td>开发</td>
+          </tr>
+          <tr>
+            <td>WAIN</td>
+            <td>社内管理系统</td>
+            <td>PHP、CakePHP、Mysql、Jquery</td>
+            <td>开发</td>
+          </tr>
+          <tr>
+            <td>SuperSearch</td>
+            <td>超级检索系统</td>
+            <td>PHP、CakePHP、Mysql、Jquery</td>
+            <td>开发</td>
+          </tr>
+        </table>
+      </div>
+    </div>
   </div>
 </div>
 </body>
