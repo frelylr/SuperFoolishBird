@@ -1,7 +1,7 @@
 
     body {
       font-size: smaller;
-      font-family: "Arial", "Microsoft YaHei", "üK‘Ì", "‘v‘Ì", sans-serif;
+      font-family: "Arial", "Microsoft YaHei", "ï¿½Kï¿½ï¿½", "ï¿½vï¿½ï¿½", sans-serif;
     }
 
     .icon {
@@ -41,7 +41,7 @@
       height: 180px;
       border-radius: 50%;
       margin: 10px auto 5px auto;
-      background: url(./img/headPhoto.png) center center no-repeat;
+      background: url(../img/headPhoto.png) center center no-repeat;
       background-size: cover;
     }
 
@@ -296,4 +296,3 @@
     #other table td:nth-child(1n+2) {
       padding-left: 40px;
     }
-  
