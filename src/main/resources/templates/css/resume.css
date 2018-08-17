@@ -1,0 +1,299 @@
+
+    body {
+      font-size: smaller;
+      font-family: "Arial", "Microsoft YaHei", "üK‘Ì", "‘v‘Ì", sans-serif;
+    }
+
+    .icon {
+      width: 1em;
+      height: 1em;
+      vertical-align: -0.15em;
+      fill: currentColor;
+      overflow: hidden;
+    }
+
+    #resume {
+      width: 1000px;
+      height: 2000px;
+      margin: auto;
+    }
+
+    #leftBody {
+      width: 300px;
+      height: inherit;
+      background-color: cadetblue;
+      float: left;
+    }
+
+    #rightBody {
+      width: 700px;
+      height: inherit;
+      background-color: whitesmoke;
+      float: left;
+    }
+
+    #personalDetails ul {
+      margin-left: 80px;
+    }
+
+    #photo {
+      width: 180px;
+      height: 180px;
+      border-radius: 50%;
+      margin: 10px auto 5px auto;
+      background: url(./img/headPhoto.png) center center no-repeat;
+      background-size: cover;
+    }
+
+    #maxim p {
+      text-align: center;
+      color: paleturquoise;
+      margin: auto;
+    }
+
+    #name p {
+      text-align: center;
+      margin: 20px auto;
+      font-size: 38px;
+      color: white;
+    }
+
+    #personalDetails {
+      margin: auto 20px;
+      font-size: 18px;
+      color: white;
+    }
+
+    #hobbies, #skills, #foreignLanguages {
+      font-size: 18px;
+      color: white;
+    }
+
+    #leftBody .iconTitle {
+      font-size: 30px;
+      margin-left: 40px;
+    }
+
+    #rightBody .iconTitle {
+      font-size: 30px;
+      margin-left: 20px;
+      color: cadetblue;
+    }
+
+    #hobbyIcon {
+      margin-top: 15px;
+      margin-left: 72px;
+      font-size: 28px;
+    }
+
+    #hobbyIcon div {
+      float: left;
+      width: 40px;
+      height: 30px;
+      background-color: white;
+      line-height: 32px;
+      text-align: center;
+      border-radius: 50%;
+    }
+
+    #hobbyIcon div:nth-child(1n+2) {
+      margin-left: 5px;
+    }
+
+    #hobbyIcon svg {
+      color: cadetblue;
+    }
+
+    .skill {
+      margin-left: 72px;
+    }
+
+    .language {
+      margin-left: 72px;
+    }
+
+    .percent {
+      height: 10px;
+      width: 120px;
+      background-color: gainsboro;
+      line-height: 10px;
+      display: inline-block;
+    }
+
+    .inner {
+      background-color: mediumturquoise;
+      height: 10px;
+      line-height: 10px;
+      display: inline-block;
+      float: left;
+    }
+
+    .skillsName {
+      font-size: 12px;
+      font-style: italic;
+      color: beige;
+    }
+
+    span.java {
+      width: 100px;
+    }
+
+    span.spring {
+      width: 65px;
+    }
+
+    span.springboot {
+      width: 75px;
+    }
+
+    span.mysql {
+      width: 80px;
+    }
+
+    span.php {
+      width: 30px;
+    }
+
+    span.jquery {
+      width: 90px;
+    }
+
+    span.vuejs {
+      width: 40px;
+    }
+
+    span.html5 {
+      width: 10px;
+    }
+
+    span.css3 {
+      width: 10px;
+    }
+
+    span.en {
+      width: 60px;
+    }
+
+    span.jp {
+      width: 30px;
+    }
+
+    .rightBodyTitle {
+      color: #fafafa;
+      text-shadow: 0 1px 0 #999, 0 2px 0 #888, 0 3px 0 #777, 0 4px 0 #666, 0 5px 0 #555, 0 6px 0 #444, 0 7px 0 #333, 0 8px 7px #001135;
+      text-align: center;
+      font-size: 24px;
+      letter-spacing: 20px;
+      margin: 10px 0 30px 0;
+    }
+
+    hr.titleLine {
+      width: 84%;
+      height: 2px;
+      margin: 0 auto;
+      border: 0;
+      background: #333 linear-gradient(to right, #5f9ea0, #5f9ea0, #f5f5f5);
+    }
+
+    #jobContent {
+      text-align: center;
+      padding: 20px 0 40px 0;
+      font-size: 15px;
+    }
+
+    #jobContent div {
+      width: 33%;
+      float: left;
+    }
+
+    #education {
+      text-align: center;
+      padding: 20px 0 40px 0;
+      font-size: 15px;
+    }
+
+    #education div {
+      width: 33%;
+      float: left;
+    }
+
+    #education div {
+      width: 33%;
+      float: left;
+    }
+
+    #experience1, #experience2, #experience3 {
+      text-align: center;
+      padding: 20px 0 10px 0;
+      font-size: 15px;
+    }
+
+    #experience3 {
+      padding-bottom: 40px;
+    }
+
+    #experience1 div, #experience2 div, #experience3 div {
+      width: 33%;
+      float: left;
+    }
+
+    #projects {
+      padding: 5px 30px 10px 50px;
+    }
+
+    .dot {
+      margin-bottom: 10px;
+      width: 15px;
+      height: 15px;
+      background-color: #f5f5f5;
+      border-radius: 50%;
+      box-shadow: 0 0 10px rgba(0, 0, 0, .3) inset;
+      -webkit-animation-name: 'ripple';
+      -webkit-animation-duration: 1s;
+      -webkit-animation-timing-function: ease-out;
+      -webkit-animation-delay: 0s;
+      -webkit-animation-iteration-count: infinite;
+      -webkit-animation-direction: alternate;
+    }
+
+    @keyframes ripple {
+      0% {
+        box-shadow: inset -1px 1px 3px 2px #5f9ea0, inset 1px -1px 3px 2px #5f9ea0, 0 0 0px 0 #b2ff1a;
+      }
+      50% {
+        box-shadow: inset -1px 1px 3px 2px #5f9ea0, inset 1px -1px 3px 2px #5f9ea0, 0 0 20px 0 #1affff;
+      }
+      100% {
+        box-shadow: inset -1px 1px 3px 2px #5f9ea0, inset 1px -1px 3px 2px #5f9ea0, 0 0 0px 0 #b2ff1a;
+      }
+    }
+
+    #blade, #compass, #pManager, #other {
+      margin-top: 10px;
+    }
+
+    #blade p, #compass p, #pManager p, #other p {
+      width: 100px;
+      font-family: helvetica, arial, sans-serif;
+      color: white;
+      font-size: 15px;
+      font-weight: bold;
+      text-shadow: 0 0 0.2em rgb(95, 158, 160), 0 0 0.2em black;
+    }
+
+    .marginTop10 {
+      margin-top: 10px;
+    }
+
+    section {
+      padding-left: 20px;
+    }
+
+    #other table {
+      margin-left: 20px;
+    }
+
+    #other table td:nth-child(1n+2) {
+      padding-left: 40px;
+    }
+  
