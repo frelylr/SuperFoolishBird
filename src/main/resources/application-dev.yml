@@ -18,7 +18,7 @@ spring:
       password: password
       driver-class-name: net.sf.log4jdbc.DriverSpy
     slave:
-      jdbc-url: jdbc:log4jdbc:mysql://xxx.xxx.xxx.xxx:xxxx/slave_db_name_2?userUnicode=true&amp;charactorEncoding=UTF-8&amp;autoReconnect=true
+      jdbc-url: jdbc:log4jdbc:mysql://xxx.xxx.xxx.xxx:xxxx/slave_db_name?userUnicode=true&amp;charactorEncoding=UTF-8&amp;autoReconnect=true
       username: root
       password: password
       driver-class-name: net.sf.log4jdbc.DriverSpy
