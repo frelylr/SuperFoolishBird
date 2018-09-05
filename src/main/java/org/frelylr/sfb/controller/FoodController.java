@@ -1,7 +1,7 @@
 package org.frelylr.sfb.controller;
 
-import org.frelylr.sfb.common.FoodFactory;
-import org.frelylr.sfb.pojo.Food;
+import org.frelylr.sfb.common.factory.FoodFactory;
+import org.frelylr.sfb.pojo.food.Food;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;

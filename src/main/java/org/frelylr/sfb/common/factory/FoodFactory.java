@@ -1,9 +1,9 @@
-package org.frelylr.sfb.common;
+package org.frelylr.sfb.common.factory;
 
-import org.frelylr.sfb.pojo.Food;
-import org.frelylr.sfb.pojo.Fruits;
-import org.frelylr.sfb.pojo.Meat;
-import org.frelylr.sfb.pojo.Vegetables;
+import org.frelylr.sfb.pojo.food.Food;
+import org.frelylr.sfb.pojo.food.Fruits;
+import org.frelylr.sfb.pojo.food.Meat;
+import org.frelylr.sfb.pojo.food.Vegetables;
 
 public class FoodFactory {
 

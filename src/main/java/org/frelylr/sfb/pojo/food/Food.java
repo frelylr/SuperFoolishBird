@@ -1,4 +1,4 @@
-package org.frelylr.sfb.pojo;
+package org.frelylr.sfb.pojo.food;
 
 import java.util.List;
 
