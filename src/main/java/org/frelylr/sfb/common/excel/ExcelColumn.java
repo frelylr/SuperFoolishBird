@@ -1,4 +1,4 @@
-package org.frelylr.sfb.common;
+package org.frelylr.sfb.common.excel;
 
 import java.lang.annotation.Documented;
 import java.lang.annotation.ElementType;

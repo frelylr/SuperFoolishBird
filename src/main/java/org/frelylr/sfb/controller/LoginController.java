@@ -10,7 +10,7 @@ import javax.servlet.http.HttpServletResponse;
 import org.apache.commons.lang.StringUtils;
 import org.frelylr.sfb.common.CommonUtils;
 import org.frelylr.sfb.common.Constants;
-import org.frelylr.sfb.common.MessagesUtil;
+import org.frelylr.sfb.common.MessagesUtils;
 import org.frelylr.sfb.dto.AdminUserMasterDto;
 import org.frelylr.sfb.dto.LanguageDto;
 import org.frelylr.sfb.form.LoginForm;
@@ -25,11 +25,14 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.servlet.LocaleResolver;
 
+import io.swagger.annotations.Api;
+import io.swagger.annotations.ApiOperation;
+
 @Controller
 public class LoginController {
 
     @Autowired
-    private MessagesUtil messagesUtil;
+    private MessagesUtils messagesUtil;
 
     @Autowired
     private LocaleResolver localeResolver;
@@ -46,12 +49,12 @@ public class LoginController {
         // TODO FL
         List<LanguageDto> languages = new ArrayList<>();
         LanguageDto languageDto = new LanguageDto();
-        languageDto.setValue("ja");
-        languageDto.setName("日本語");
-        languages.add(languageDto);
-        languageDto = new LanguageDto();
         languageDto.setValue("zh");
         languageDto.setName("中文");
+        languages.add(languageDto);
+        languageDto = new LanguageDto();
+        languageDto.setValue("ja");
+        languageDto.setName("日本語");
         languages.add(languageDto);
         languageDto = new LanguageDto();
         languageDto.setValue("en");

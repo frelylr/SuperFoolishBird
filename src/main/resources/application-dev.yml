@@ -27,3 +27,11 @@ spring:
   messages:
     encoding: UTF-8
     basename: messages/messages
+swaggerUI:
+  show: true
+ftp:
+  config:
+    hostname: xx.xx.xx.xx
+    port: 21
+    username: ful
+    password: 123456

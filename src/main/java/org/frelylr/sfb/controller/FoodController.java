@@ -8,6 +8,9 @@ import org.springframework.web.bind.annotation.RestController;
 
 import java.util.List;
 
+import io.swagger.annotations.Api;
+
+@Api(tags = "食物工厂")
 @RestController
 public class FoodController {
 

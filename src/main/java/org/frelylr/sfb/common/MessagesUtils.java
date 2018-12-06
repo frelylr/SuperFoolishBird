@@ -8,7 +8,7 @@ import org.springframework.lang.Nullable;
 import org.springframework.stereotype.Component;
 
 @Component
-public class MessagesUtil {
+public class MessagesUtils {
 
     @Autowired
     private MessageSource messageSource;

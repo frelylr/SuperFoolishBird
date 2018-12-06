@@ -2,6 +2,7 @@ package org.frelylr.sfb.form;
 
 import org.frelylr.sfb.common.Constants;
 
+import io.swagger.annotations.ApiModel;
 
 public class BaseForm {
 

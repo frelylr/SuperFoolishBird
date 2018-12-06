@@ -1,6 +1,6 @@
 package org.frelylr.sfb.controller;
 
-import org.frelylr.sfb.common.MessagesUtil;
+import org.frelylr.sfb.common.MessagesUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.core.env.Environment;
 import org.springframework.stereotype.Controller;
@@ -15,7 +15,7 @@ public class MenuController {
     private Environment env;
 
     @Autowired
-    private MessagesUtil messagesUtil;
+    private MessagesUtils messagesUtil;
 
 
     /**

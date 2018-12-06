@@ -1,5 +1,8 @@
 package org.frelylr.sfb.form;
 
+import io.swagger.annotations.ApiModel;
+
+@ApiModel("LoginForm")
 public class LoginForm extends BaseForm {
 
     private String mailAddress;
